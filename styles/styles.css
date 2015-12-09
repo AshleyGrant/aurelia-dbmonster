@@ -1,3 +1,27 @@
+.dbmon-wrapper {
+  height: 94vh;
+  display:block;
+  position:absolute;
+  top: 52px;
+  width: 100%;
+}
+
+.tr_false {
+  background-color: #f9f9f9;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+.tr_false {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.dbmon-wrapper tr td {
+}
+
+.dbmon-wrapper
+
 .Query {
   position: relative;
 }
@@ -7,4 +31,3 @@
   width: 100%;
   display: block;
 }
-

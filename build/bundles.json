@@ -26,7 +26,8 @@
         "aurelia/templating",
         "aurelia/templating-binding",
         "aurelia/templating-resources",
-        "aurelia/templating-router"
+        "aurelia/templating-router",
+        "aurelia/ui-virtualization"
       ],
       "options": {
         "inject": true,

@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <table class="table table-striped latest-data" ref="optimizedTable">
+  <div class="dbmon-wrapper">
+    <table class="table latest-data" ref="optimizedTable">
       <tbody>
-        <tr repeat.for="db of databases">
+        <tr virtual-repeat.for="db of databases" class="tr_${$odd}">
           <td class="dbname">
-            ${db.dbname & oneTime}
+            ${db.dbname}
           </td>
           <td class="query-count">
-            <span simple-class.one-time="db.lastSample.countClassName">
-              ${db.lastSample.nbQueries & oneTime}
+            <span simple-class.bind="db.lastSample.countClassName">
+              ${db.lastSample.nbQueries}
             </span>
           </td>
           <td repeat.for="q of db.lastSample.topFiveQueries & oneTime" simple-class.one-time="q.elapsedClassName">

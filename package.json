@@ -56,6 +56,8 @@
     "dependencies": {
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1",
+      "aurelia-metadata": "npm:aurelia-metadata@^1.0.0-beta.1",
+      "aurelia-ui-virtualization": "npm:aurelia-ui-virtualization@^0.3.0",
       "text": "github:systemjs/plugin-text@^0.0.3"
     },
     "devDependencies": {
