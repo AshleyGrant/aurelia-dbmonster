@@ -1,0 +1,28 @@
+<template>
+  <div class="dbmon-wrapper">
+    <table class="table latest-data" ref="optimizedTable">
+      <tbody>
+        <tr virtual-repeat.for="db of databases" class="tr_${$odd}">
+          <td class="dbname">
+            ${db.dbname}
+          </td>
+          <td class="query-count">
+            <span simple-class.bind="db.lastSample.countClassName">
+              ${db.lastSample.nbQueries}
+            </span>
+          </td>
+          <td repeat.for="q of db.lastSample.topFiveQueries & oneTime" simple-class.one-time="q.elapsedClassName">
+            ${q.formatElapsed & oneTime}
+            <div class="popover left">
+              <div class="popover-content">
+                ${q.query & oneTime}
+                <foo>hello world</foo>
+              </div>
+              <div class="arrow"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
