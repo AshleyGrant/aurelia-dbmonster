@@ -339,7 +339,7 @@ define(['exports', 'aurelia-dependency-injection', 'aurelia-binding', 'aurelia-t
       view.bindingContext[this.local] = items[index];
       viewSlot.children.push(viewSlot.children.shift());
       this.domStrategy.moveViewLast(view, virtualScrollInner, childrenLength);
-      var marginTop = this.itemHeight * first + "px";
+      var marginTop = -this.currentY + "px";
       virtualScrollInner.style.marginTop = marginTop;
     };
 
@@ -355,7 +355,7 @@ define(['exports', 'aurelia-dependency-injection', 'aurelia-binding', 'aurelia-t
         _aureliaTemplatingResourcesRepeatUtilities.updateOverrideContext(view.overrideContext, first, items.length);
         viewSlot.children.unshift(viewSlot.children.splice(-1, 1)[0]);
         this.domStrategy.moveViewFirst(view, virtualScrollInner);
-        var marginTop = this.itemHeight * first + "px";
+        var marginTop = -this.currentY + "px";
         virtualScrollInner.style.marginTop = marginTop;
       }
     };

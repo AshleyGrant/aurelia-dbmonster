@@ -2,7 +2,7 @@
   <div class="dbmon-wrapper">
     <table class="table latest-data" ref="optimizedTable">
       <tbody>
-        <tr virtual-repeat.for="db of databases" class="tr_${$odd}">
+        <tr virtual-repeat.for="db of databases" view-cache="*">
           <td class="dbname">
             ${db.dbname}
           </td>
@@ -11,7 +11,7 @@
               ${db.lastSample.nbQueries}
             </span>
           </td>
-          <td repeat.for="q of db.lastSample.topFiveQueries & oneTime" simple-class.one-time="q.elapsedClassName">
+          <td repeat.for="q of db.lastSample.topFiveQueries & oneTime" simple-class.one-time="q.elapsedClassName" view-cache="*">
             ${q.formatElapsed & oneTime}
             <div class="popover left">
               <div class="popover-content">

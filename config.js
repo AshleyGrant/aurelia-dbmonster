@@ -12,13 +12,6 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-  bundles: {
-    "app-build": [
-      "app",
-      "app.html!github:systemjs/plugin-text@0.0.3",
-      "main"
-    ]
-  },
 
   map: {
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1",
