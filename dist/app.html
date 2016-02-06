@@ -1,7 +1,6 @@
 <template>
   <div class="dbmon-wrapper">
     <table class="table latest-data" ref="optimizedTable">
-      <tbody>
         <tr virtual-repeat.for="db of databases" class="tr_${$odd}" view-cache="*">
           <td class="dbname">
             ${db.dbname}
@@ -22,7 +21,6 @@
             </div>
           </td>
         </tr>
-      </tbody>
     </table>
   </div>
 </template>

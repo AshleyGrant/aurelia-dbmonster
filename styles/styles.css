@@ -1,9 +1,10 @@
 .dbmon-wrapper {
-  height: 94vh;
+  height: 90vh;
   display:block;
   position:absolute;
   top: 52px;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .tr_false {
