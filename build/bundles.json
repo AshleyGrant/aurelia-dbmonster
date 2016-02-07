@@ -15,19 +15,8 @@
       "includes": [
         "aurelia-framework",
         "aurelia-bootstrapper",
-        "aurelia/event-aggregator",
-        "aurelia/history",
-        "aurelia/history-browser",
-        "aurelia/loader-default",
-        "aurelia/logging-console",
-        "aurelia/pal",
-        "aurelia/pal-browser",
-        "aurelia/router",
-        "aurelia/templating",
-        "aurelia/templating-binding",
-        "aurelia/templating-resources",
-        "aurelia/templating-router",
-        "aurelia/ui-virtualization"
+        "aurelia-metadata",
+        "martingust/ui-virtualization"
       ],
       "options": {
         "inject": true,

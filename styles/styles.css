@@ -1,11 +1,19 @@
 .dbmon-wrapper {
-  height: 90vh;
+  height: 94vh;
   display:block;
   position:absolute;
   top: 52px;
   width: 100%;
   overflow-y: scroll;
 }
+
+ tr:first-child td {
+   padding: 0px !important;
+ }
+
+ tr:last-child td {
+   padding: 0px !important;
+ }
 
 .tr_false {
   background-color: #f9f9f9;

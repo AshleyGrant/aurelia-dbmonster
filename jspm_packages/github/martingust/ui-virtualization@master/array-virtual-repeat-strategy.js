@@ -40,7 +40,7 @@ define(['exports', 'aurelia-templating-resources/array-repeat-strategy', 'aureli
     ArrayVirtualRepeatStrategy.prototype._inPlaceProcessItems = function _inPlaceProcessItems(repeat, items) {
       var itemsLength = items.length;
       var viewsLength = repeat.viewSlot.children.length;
-      var first = repeat._first;
+      var first = repeat._getIndexOfFirstView();
 
       while (viewsLength > repeat._viewsLength) {
         viewsLength--;
@@ -57,7 +57,6 @@ define(['exports', 'aurelia-templating-resources/array-repeat-strategy', 'aureli
         if (view.bindingContext[local] === items[i + first] && view.overrideContext.$middle === middle && view.overrideContext.$last === last) {
           continue;
         }
-
         view.bindingContext[local] = items[i + first];
         view.overrideContext.$middle = middle;
         view.overrideContext.$last = last;
@@ -65,6 +64,7 @@ define(['exports', 'aurelia-templating-resources/array-repeat-strategy', 'aureli
         while (j--) {
           _aureliaTemplatingResourcesRepeatUtilities.updateOneTimeBinding(view.bindings[j]);
         }
+
         j = view.controllers.length;
         while (j--) {
           var k = view.controllers[j].boundProperties.length;
@@ -73,6 +73,7 @@ define(['exports', 'aurelia-templating-resources/array-repeat-strategy', 'aureli
             _aureliaTemplatingResourcesRepeatUtilities.updateOneTimeBinding(binding);
           }
         }
+
       }
 
       for (var i = viewsLength; i < repeat._viewsLength; i++) {
